@@ -1,0 +1,224 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+   --PRIMARY-COLOR-- : #54E6AF;
+    --SECONDARY-COLOR-- : #5A668A;
+    --PURPLE-COLOR-- : #C2CBE5;
+    --DARK-PURPLE--: #2C344B;
+    --DARK-BLUE--: #121725;
+    --WHITE--: #FFFFFF;
+
+}
+html{
+    font-size: 18px;
+}
+body{
+    font-family: "Chivo";
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    background-color: var(--DARK-BLUE--);
+    color: var(--PURPLE-COLOR--);
+    line-height: 1.556rem;
+}
+h1{
+    font-weight: 100;
+    color:white;
+}
+.uppercase{
+    font-size: 2.889rem;
+    text-transform: uppercase;
+}
+.green{
+    color: var(--PRIMARY-COLOR--)!important;
+}
+.wrapper{
+    padding: 5.667rem 0 5.667rem 8.667rem;
+    height: 100vh;
+}
+.logo{
+    margin-bottom: 5.722rem;
+}
+.module{
+    width: 90%;
+    max-width: 40.167rem;
+    padding-top:4.889rem;
+    background-color: var(--DARK-BLUE--);
+}
+.text{
+    margin-top: 1.333rem;
+    max-width: 24.722rem;
+    
+}
+button{
+    background-color: var(--PRIMARY-COLOR--);
+    border: none;
+    border-radius: 75px;
+    padding: 0.5rem 1.5rem;
+    color: black;
+    font-weight: 500;
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+form{
+    position: relative;
+    width: 23.722rem;
+    margin-top: 2.222rem;
+    margin-bottom: 3.3556rem;
+}
+button:hover{
+    background-color: #b3ffe2; 
+    
+}
+input{
+    padding: 0.778rem  12rem  0.778rem 1.778rem;
+    border-radius: 75px;
+    background-color: var(--SECONDARY-COLOR--);
+    border: none;
+    opacity: 0.5;
+    width: 100%;
+}
+input::placeholder{
+    color: var(--WHITE--)!important;
+}
+.img-container{
+    position: absolute;
+    z-index: -1000;
+    right: 0;
+    top:9;
+}
+.tablet{
+    display: none;
+
+}
+.mobile{
+    display: none!important;
+}
+
+.pattern{
+    position: absolute;
+    right:0;
+    top: 75%;
+    z-index: -1000;
+}
+.streams.desktop{
+    align-items: start !important;
+}
+#error-message{
+    color: red;
+    padding: 1rem;
+}
+
+/* TABLET */
+
+@media screen and (max-width : 768px) {
+    .desktop{
+        display: none;
+    }
+    .tablet{
+        display: block;
+    }
+    .img-container{
+        right:0;
+        top:0;
+    }
+    .pattern{
+        left: 2.167rem;
+        top: 1000px;
+    }
+    .wrapper{
+        padding-left: 2.167rem;
+    }
+    .mobile{
+        display: none!important;
+    }
+    form{
+        width: 100%;
+    }
+    .streams.desktop{
+        width: 100%;
+
+    }
+    .streams.desktop>img{
+        width: 20%;
+        
+    }
+}
+/* MOBILE */
+@media screen and (max-width : 375px) {
+    html{
+        font-size: 15px;
+    }
+    .tablet{
+        display: none;
+
+    }
+    .streams.desktop{
+        display: none!important;
+    }
+    .mobile{
+        display: block!important;
+    }
+    h1{
+        font-weight: 100;
+        font-size: 1.733rem!important;
+    }
+    .wrapper{
+        display: flex;
+        padding-left: 1.333rem;
+        padding-right: 1.333rem ;
+        padding-top: 4.133rem;
+        align-items: center!important;
+        justify-content: start !important;
+        background-color: rgba(44,52,75,0.9);
+    }
+    
+    .pattern{
+        display: none;
+    }
+    .module{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top:3.8rem;
+        text-align: center;
+        background-color: transparent;
+
+    }
+    .img-container{
+        height: 100vh;
+    }
+    .bg-img{
+        height: inherit;
+        object-fit: cover;
+    }
+    .logo{
+        margin-bottom: 0;
+    }
+    form{
+        width: 100%;
+    }
+    input{
+        padding: 0.778rem  1.778rem  0.778rem 1.778rem;
+        width: 100%;
+    }
+    button{
+        margin-top: 1.067rem;
+        position:initial;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.778rem  1.778rem  0.778rem 1.778rem;
+        top:0;
+        right: 0;
+    }
+    .streams.mobile>img{
+        width: 24%;
+    }
+    .green{
+        white-space: nowrap;
+    }
+    
+}
